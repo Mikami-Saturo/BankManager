@@ -1,15 +1,23 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // Création d'un compte courant
+        CheckingAccount checking = new CheckingAccount();
+        checking.account = "CC-001";
+        checking.balance = 1500.0;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        // Création d'un compte d'épargne
+        SavingsAccount savings = new SavingsAccount();
+        savings.account = "CE-001";
+        savings.balance = 5000.0;
+
+        // Création d'un certificat de dépôt
+        COD cod = new COD();
+        cod.account = "COD-001";
+        cod.balance = 10000.0;
+
+        // Affichage des informations
+        System.out.println("Compte courant : " + checking.account + ", solde : " + checking.balance);
+        System.out.println("Compte épargne : " + savings.account + ", solde : " + savings.balance);
+        System.out.println("COD : " + cod.account + ", solde : " + cod.balance);
     }
 }
